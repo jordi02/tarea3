@@ -35,11 +35,12 @@ alert("La nota anual promedio es de " + Resultado)
      PedirNotas7 = Number(prompt("Ingresa la nota de Ingles"))
      PedirNotas8 = Number(prompt("Ingresa la nota de Gimnasia"))
      PedirNotas9 = Number(prompt("Ingresa la nota de Informatica"))
+     Resultado = (PedirNotas+PedirNotas2+PedirNotas3+PedirNotas4+PedirNotas5+PedirNotas6+PedirNotas7+PedirNotas8+PedirNotas9)/9
      if(Resultado>=6){
         mensaje.innerText = "APROBASTE EL AÑO"
         break
     } 
-    else if(Resultado<6){
+    else{
         mensaje.innerText = "DESAPROBASTE EL AÑO"
         break
     }
