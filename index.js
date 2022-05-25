@@ -2,6 +2,8 @@ const materiasPracticas = [" Matematicas", " Ingles"," Gimnasia", " Informatica"
 const materiasEstudio = [" Lengua", " Biologìa", " Sociales", "Derecho", "Historia" ]
 const materias = materiasEstudio.concat(materiasPracticas)
 alert("Las materias son :"+materias)
+const mensaje = document.getElementById("nodo")
+
 
 let PedirNotas = Number(prompt("Ingresa la nota de Lengua"))
 let PedirNotas2 = Number(prompt("Ingresa la nota de Biologìa"))
@@ -17,13 +19,13 @@ let Resultado = (PedirNotas+PedirNotas2+PedirNotas3+PedirNotas4+PedirNotas5+Pedi
 alert("La nota anual promedio es de " + Resultado)
 
 
-if(Resultado>=6){
-    alert("Usted aprueba el año")
-} 
-else if(Resultado<6){
-    alert("Usted no aprueba el año")
-}
-while(isNaN(Resultado)){
+    if(Resultado>=6){
+    mensaje.innerText = "APROBASTE EL AÑO"
+    } 
+    else if(Resultado<6){
+     mensaje.innerText = "DESAPROBASTE EL AÑO"
+    }
+    while(isNaN(Resultado)){
      PedirNotas = Number(prompt("Ingresa la nota de Lengua"))
      PedirNotas2 = Number(prompt("Ingresa la nota de Biologìa"))
      PedirNotas3 = Number(prompt("Ingresa la nota de Sociales"))
@@ -34,11 +36,11 @@ while(isNaN(Resultado)){
      PedirNotas8 = Number(prompt("Ingresa la nota de Gimnasia"))
      PedirNotas9 = Number(prompt("Ingresa la nota de Informatica"))
      if(Resultado>=6){
-        alert("Usted aprueba el año")
+        mensaje.innerText = "APROBASTE EL AÑO"
         break
     } 
-    else{
-        alert("Usted no aprueba el año")
+    else if(Resultado<6){
+        mensaje.innerText = "DESAPROBASTE EL AÑO"
         break
     }
 }
